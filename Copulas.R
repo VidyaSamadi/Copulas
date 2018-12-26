@@ -1,4 +1,4 @@
-
+#This code is written by VSamadi
 library(copula)
 library(hydroGOF)
 library(fitdistrplus)
@@ -37,9 +37,8 @@ myBvd.galambos=  mvdc(copula=glambos.cop,  margins=my.margins, paramMargins=my.p
 myBvd.plackett=  mvdc(copula=plackett.cop, margins=my.margins, paramMargins=my.params)
 myBvd.joe =      mvdc(copula=joe.cop,      margins=my.margins, paramMargins=my.params)
 
-##############################################################################
-# Estimate Custom Bivariate Distn by MLE######################################
-##############################################################################
+# Estimate Custom Bivariate Distn by MLE#
+
 start.vals1 = c(fit.d$estimate[1],fit.d$estimate[2],fit.s$estimate[1],fit.s$estimate[2],gum.para)
 names(start.vals1)=c("m1", "m2", "m3", "m4", "m5")
 myBvd.fitMvdc1 = fitMvdc(m, myBvd.gum, start.vals1)
